@@ -1,0 +1,39 @@
+{
+  "name": "footstone",
+  "version": "0.0.1-apache.1",
+  "description": "footstone",
+  "keywords": [
+    "components",
+    "for",
+    "wisewe",
+    "framework",
+    "v4"
+  ],
+  "author": "王刚 <wanggang@tellyes.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "src/footstone.js",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangg-912/wisewe-framework-v4.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/wangg-912/wisewe-framework-v4/issues"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

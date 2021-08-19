@@ -1,0 +1,28 @@
+{
+  "name": "config",
+  "version": "0.0.1-apache.1",
+  "description": "config for wisewe framework v4",
+  "keywords": [
+    "config"
+  ],
+  "author": "王刚 <wanggang@tellyes.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "src/config.js",
+  "directories": {
+    "src": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
