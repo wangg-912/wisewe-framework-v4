@@ -1,1 +1,4 @@
 /lib
+/packages/utils/tools.ts
+/packages/utils/animation.ts
+/packages/utils/factory/*.ts

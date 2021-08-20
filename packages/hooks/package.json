@@ -1,0 +1,30 @@
+{
+  "name": "@wisewe-framework-v4/hooks",
+  "version": "0.0.1-apache.1",
+  "description": "hooks for wisewe framework v4",
+  "keywords": [
+    "hooks"
+  ],
+  "author": "王刚 <wanggang@tellyes.com>",
+  "homepage": "https://github.com/wangg-912/wisewe-framework-v4#readme",
+  "license": "MIT",
+  "directories": {
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangg-912/wisewe-framework-v4.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/wangg-912/wisewe-framework-v4/issues"
+  }
+}
