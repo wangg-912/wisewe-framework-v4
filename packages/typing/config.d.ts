@@ -3,6 +3,7 @@ import { RouterTransitionEnum, ThemeEnum } from '@wisewe-framework-v4/enums/appE
  *@description 菜单栏接口配置
  */
 export interface MenuSetting {
+  show: boolean
   bgColor: string
   fixed: boolean
   collapsed: boolean
@@ -31,7 +32,6 @@ export interface HeaderSetting {
   show: boolean
   theme: ThemeEnum
   showFullScreen: boolean
-  useLockPage: boolean
   showNotice: boolean
   showSearch: boolean
 }
@@ -50,13 +50,16 @@ export interface TransitionSetting {
  * @description 项目配置接口
  */
 export interface ProjectConfig {
-  showSettingButton: boolean // 是否显示配置按钮
+  showSetting: boolean // 是否显示配置按钮
+  settingButtonPosition: string
+  permissionMode: string
+  permissionCacheType: any
   grayMode: boolean // 网站灰色模式，用于可能悼念的日期开启
   colorWeak: boolean // 是否开启色弱模式
   themeColor: string // 主题色
   fullContent: boolean
+  contentMode: string
   showLogo: boolean
-  showFooter: boolean
   headerSetting: HeaderSetting
   menuSetting: MenuSetting
   tagsSetting: TagsSetting
@@ -64,10 +67,10 @@ export interface ProjectConfig {
   showBreadCrumb: boolean
   showBreadCrumbIcon: boolean
   canEmbedIFramePage: boolean
-  // 切换界面的时候是否删除未关闭的message及notify
-  closeMessageOnSwitch: boolean
-  // 切换界面的时候是否取消已经发送但是未响应的http请求。
-  removeAllHttpPending: boolean
+  mobileTrigger: boolean
+  showfooter: boolean
+  waterMark: boolean
+  transitionSetting: TransitionSetting
 }
 interface ProjectSettingWrap {
   projectSetting: Readonly<ProjectConfig>

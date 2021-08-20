@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@wisewe-framework-v4/enums": "^0.0.1-apache.1",
+    "@wisewe-framework-v4/typing": "^0.0.1-apache.1",
     "chalk": "^4.1.2"
   }
 }
