@@ -6,11 +6,10 @@
     "config"
   ],
   "author": "王刚 <wanggang@tellyes.com>",
-  "homepage": "",
+  "homepage": "https://github.com/wangg-912/wisewe-framework-v4#readme",
   "license": "MIT",
   "main": "src/config.js",
   "directories": {
-    "src": "src",
     "test": "__tests__"
   },
   "files": [
@@ -24,5 +23,12 @@
   },
   "dependencies": {
     "chalk": "^4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangg-912/wisewe-framework-v4.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangg-912/wisewe-framework-v4/issues"
   }
 }
