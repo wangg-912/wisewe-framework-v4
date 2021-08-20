@@ -1,18 +1,13 @@
 {
-  "name": "@wisewe-framework-v4/footstone",
+  "name": "@wisewe-framework-v4/typing",
   "version": "0.0.1-apache.1",
-  "description": "footstone",
+  "description": "typing for wisewe framework v4",
   "keywords": [
-    "components",
-    "for",
-    "wisewe",
-    "framework",
-    "v4"
+    "typing"
   ],
   "author": "王刚 <wanggang@tellyes.com>",
-  "homepage": "",
+  "homepage": "https://github.com/wangg-912/wisewe-framework-v4#readme",
   "license": "MIT",
-  "main": "src/footstone.js",
   "directories": {
     "src": "src",
     "test": "__tests__"
@@ -34,6 +29,7 @@
     "url": "https://github.com/wangg-912/wisewe-framework-v4/issues"
   },
   "dependencies": {
+    "@wisewe-framework-v4/enums": "^0.0.1-apache.1",
     "chalk": "^4.1.2"
   }
 }

@@ -7,7 +7,7 @@
 0 silly argv   pkg: '@wisewe-framework-v4/setting'
 0 silly argv }
 1 notice cli v4.0.0
-2 verbose rootPath E:\wp-evolution\wisewe-framwork-v4@repo
+2 verbose rootPath E:\wp-evolution\wisewe-framework-v4@repo
 3 info versioning independent
 4 error HttpErrorGeneral: 404 Not Found - GET https://registry.npmjs.com/@wisewe-framework-v4%2fsetting - Not found
 4 error     at C:\Users\lenovo\AppData\Roaming\npm\node_modules\lerna\node_modules\npm-registry-fetch\check-response.js:95:15

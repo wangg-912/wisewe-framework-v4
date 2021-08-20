@@ -1,5 +1,5 @@
 {
-  "name": "enums",
+  "name": "@wisewe-framework-v4/enums",
   "version": "0.0.1-apache.1",
   "description": "enums for wisewe framework v4",
   "keywords": [
@@ -8,7 +8,6 @@
   "author": "王刚 <wanggang@tellyes.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "src/enums.js",
   "directories": {
     "src": "src",
     "test": "__tests__"

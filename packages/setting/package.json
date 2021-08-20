@@ -1,5 +1,5 @@
 {
-  "name": "setting",
+  "name": "@wisewe-framework-v4/setting",
   "version": "0.0.1-apache.1",
   "description": "setting for wisewe framework v4",
   "keywords": [
@@ -8,7 +8,6 @@
   "author": "王刚 <wanggang@tellyes.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "src/setting.js",
   "directories": {
     "src": "src",
     "test": "__tests__"
@@ -23,6 +22,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+    "@wisewe-framework-v4/enums": "^0.0.1-apache.1",
     "chalk": "^4.1.2"
   }
 }
