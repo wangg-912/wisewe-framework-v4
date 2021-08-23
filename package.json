@@ -8,8 +8,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "commit": "git-cz",
-    "build": "yarn build:components && build:umd && build:esm &&yarn build:tools",
-    "build:components": "npm run build:esm && npm run build:umd && npm run build:cjs",
+    "build": "yarn build:packages && yarn build:utils",
+    "build:packages": "npm run build:esm && npm run build:umd && npm run build:cjs",
+    "build:utils": "cross-env BABEL_ENV=utils babel packages/utils --extensions .ts --out-dir lib",
     "build:cjs": "rollup --config ./build/rollup.config.cjs.js",
     "build:umd": "rollup --config ./build/rollup.config.umd.js",
     "build:esm": "rollup --config ./build/rollup.config.esm.js",

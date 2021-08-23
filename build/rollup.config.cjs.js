@@ -17,22 +17,22 @@ const createBanner = () => {
   return `/*!
   * ${pkg.name} v${pkg.version}
   * author wg
-  * (c) ${new Date().getFullYear()} @wisewe/components
+  * (c) ${new Date().getFullYear()} @wisewe-framework-v4/**
   * @license MIT
   */`
 }
 export default [
   {
-    input: path.resolve(__dirname, '../packages/components/index.ts'),
+    input: path.resolve(__dirname, '../packages/**/*.ts'),
     output: {
       format: 'cjs',
       file: createFileName('cjs'),
       banner: createBanner(),
       name: 'wisewe',
       globals: {
-        vue: 'vue'
+        vue: 'vue',
       },
-      exports: 'named'
+      exports: 'named',
     },
     plugins: [
       terser(),
@@ -41,18 +41,18 @@ export default [
       vue({
         target: 'browser',
         css: false,
-        exposeFilename: false
+        exposeFilename: false,
       }),
       typescript({
         tsconfigOverride: {
           include: ['packages/**/*', 'typings/shims-vue.d.ts'],
-          exclude: ['node_modules', 'packages/**/__tests__/*']
+          exclude: ['node_modules', 'packages/**/__tests__/*'],
         },
-        abortOnError: false
-      })
+        abortOnError: false,
+      }),
     ],
     external(id) {
-      return /^vue/.test(id) || deps.some((k) => new RegExp('^' + k).test(id))
-    }
-  }
+      return /^vue/.test(id) || deps.some(k => new RegExp('^' + k).test(id))
+    },
+  },
 ]

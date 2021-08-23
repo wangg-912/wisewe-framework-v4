@@ -1,78 +1,67 @@
 module.exports = {
-  root: true,
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+      tsx: true,
+    },
+  },
   env: {
+    browser: true,
     node: true,
   },
+  plugins: [
+    '@typescript-eslint',
+  ],
   extends: [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/typescript/recommended",
-    "@vue/prettier",
-    "@vue/prettier/@typescript-eslint",
+    'plugin:@typescript-eslint/recommended',
+    'plugin:vue/vue3-recommended',
   ],
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
   rules: {
-    '@typescript-eslint/ban-ts-ignore': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-empty-function': 'off',
-    'vue/custom-event-name-casing': 'off',
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off',
+    // js/ts
+    'eol-last': 'error',
+    'no-trailing-spaces': 'error',
+    'comma-style': ['error', 'last'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'no-multi-spaces': 'error',
+    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+    camelcase: ['error', { properties: 'never' }],
+    semi: ['error', 'never'],
+    indent: ['error', 2, { SwitchCase: 1 }],
+    'object-curly-spacing': ['error', 'always'],
+    'arrow-parens': ['error', 'as-needed'],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-unused-vars': [
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/member-delimiter-style': [
       'error',
       {
-        argsIgnorePattern: '^h$',
-        varsIgnorePattern: '^h$',
-      },
-    ],
-    'no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^h$',
-        varsIgnorePattern: '^h$',
-      },
-    ],
-    'space-before-function-paren': 'off',
-
-    'vue/attributes-order': 'off',
-    'vue/one-component-per-file': 'off',
-    'vue/html-closing-bracket-newline': 'off',
-    'vue/max-attributes-per-line': 'off',
-    'vue/multiline-html-element-content-newline': 'off',
-    'vue/singleline-html-element-content-newline': 'off',
-    'vue/attribute-hyphenation': 'off',
-    // 'vue/html-self-closing': 'off',
-    'vue/require-default-prop': 'off',
-    'vue/html-self-closing': [
-      'error',
-      {
-        html: {
-          void: 'always',
-          normal: 'never',
-          component: 'always',
+        multiline: {
+          delimiter: 'none',
+          requireLast: false,
         },
-        svg: 'always',
-        math: 'always',
+        singleline: {
+          delimiter: 'semi',
+          requireLast: true,
+        },
       },
     ],
-  },
-  overrides: [
-    {
-      files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)",
-      ],
-      env: {
-        jest: true,
+    // vue
+    'vue/no-v-html': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/html-self-closing': ['error', {
+      html: {
+        void: 'never',
+        normal: 'never',
+        component: 'always',
       },
-    },
-  ],
-};
+    }],
+    'vue/max-attributes-per-line': ['error', {
+      singleline: 3,
+      multiline: 1,
+    }],
+    'vue/require-default-prop': 'off',
+    'vue/html-closing-bracket-spacing': 'error',
+  },
+}
