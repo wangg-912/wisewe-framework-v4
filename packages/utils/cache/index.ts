@@ -11,13 +11,14 @@ const createOptions = (storage = sessionStorage) => {
     // 调试模式不加密
     hasEncrypt: enableStorageEncryption,
     storage,
-    prefixKey: getStorageShortName()
+    prefixKey: getStorageShortName(),
   }
 }
 
 export const WebStorage = create(createOptions())
 
-export const createStorage = (storage: Storage = sessionStorage) => {
+export const createStorage = (storage = sessionStorage) => {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return create(createOptions(storage))!
 }
 

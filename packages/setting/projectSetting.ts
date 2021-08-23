@@ -1,7 +1,7 @@
 import type { ProjectConfig } from '@wisewe-framework-v4/typing/config'
-import { ContentEnum, PermissionModeEnum, ThemeEnum, RouterTransitionEnum, SettingButtonPositionEnum } from '@wisewe-framework-v4/enums/appEnum' // app 枚举
-import { MenuTypeEnum, MenuModeEnum, TriggerEnum } from '@wisewe-framework-v4/enums/menuEnum'
-import { CacheTypeEnum } from '@wisewe-framework-v4/enums/cacheEnum'
+import { ContentEnum, PermissionModeEnum, ThemeEnum, RouterTransitionEnum, SettingButtonPositionEnum } from '@wisewe-framework-v4/enums' // app 枚举
+import { MenuTypeEnum, MenuModeEnum, TriggerEnum } from '@wisewe-framework-v4/enums'
+import { CacheTypeEnum } from '@wisewe-framework-v4/enums'
 const setting: ProjectConfig = {
   //是否显示配置按钮
   showSetting: true,
@@ -44,7 +44,7 @@ const setting: ProjectConfig = {
     // 是否显示通知
     showNotice: true,
     // 显示菜单搜索
-    showSearch: true
+    showSearch: true,
   },
   // 菜单配置
   menuSetting: {
@@ -68,7 +68,7 @@ const setting: ProjectConfig = {
     // 顶部菜单布局
     topMenuAlign: 'center',
     // Fold trigger position
-    trigger: TriggerEnum.HEADER
+    trigger: TriggerEnum.HEADER,
   },
   // 标签配置
   tagsSetting: {
@@ -77,7 +77,7 @@ const setting: ProjectConfig = {
     // 是否显示右键功能
     showContextmenu: true,
     // 是否显示快捷功能
-    showQuick: true
+    showQuick: true,
   },
   // 动画配置
   transitionSetting: {
@@ -88,7 +88,7 @@ const setting: ProjectConfig = {
     // 开启页面加载模式
     openPageLoading: true,
     // 开启顶部进度
-    openNProgress: true
+    openNProgress: true,
   },
   // 是否启用KeepAlive缓存最好在开发过程中关闭，否则每次都需要清除缓存
   openKeepAlive: true,
@@ -97,7 +97,7 @@ const setting: ProjectConfig = {
   // 是否显示面包屑图标
   showBreadCrumbIcon: false,
   // 是否可以嵌入iframe页面
-  canEmbedIFramePage: true
+  canEmbedIFramePage: true,
 }
 
 export default setting

@@ -1,7 +1,7 @@
 {
   "name": "wisewe-framework-v4",
-  "private": true,
-  "version": "0.0.1-apache.1",
+  "private": false,
+  "version": "0.0.1-apche.1",
   "workspaces": [
     "packages/*"
   ],
@@ -10,7 +10,7 @@
     "commit": "git-cz",
     "build": "yarn build:packages && yarn build:utils",
     "build:packages": "npm run build:esm && npm run build:umd && npm run build:cjs",
-    "build:utils": "cross-env BABEL_ENV=utils babel packages/utils --extensions .ts --out-dir lib",
+    "build:all": "cross-env BABEL_ENV=utils babel packages/* --extensions .ts --out-dir lib",
     "build:cjs": "rollup --config ./build/rollup.config.cjs.js",
     "build:umd": "rollup --config ./build/rollup.config.umd.js",
     "build:esm": "rollup --config ./build/rollup.config.esm.js",

@@ -1,6 +1,6 @@
 import { ref, computed, ComputedRef, unref } from 'vue'
 import { useEventListener } from './../event/useEventListener'
-import { screenMap, sizeEnum, screenEnum } from '@wisewe-framework-v4/enums/windowEnum'
+import { screenMap, sizeEnum, screenEnum } from '@wisewe-framework-v4/enums'
 /**
  * @description 全局常量 globalScreenRef|globalWidthRef|globalRealWidthRef
  */
@@ -22,7 +22,7 @@ export function useWindow() {
     screenRef: computed(() => unref(globalScreenRef)),
     widthRef: globalWidthRef,
     screenEnum,
-    realWidthRef: globalRealWidthRef
+    realWidthRef: globalRealWidthRef,
   }
 }
 
@@ -58,7 +58,7 @@ export function createWindowListen(fn?: (opt: CreateCallbackParams) => void) {
     listener: () => {
       getWindowWidth()
       resizeFn()
-    }
+    },
   })
 
   getWindowWidth()
@@ -74,7 +74,7 @@ export function createWindowListen(fn?: (opt: CreateCallbackParams) => void) {
       realWidth: globalRealWidthRef,
       screenEnum,
       screenMap,
-      sizeEnum
+      sizeEnum,
     })
   }
   resizeFn()
@@ -82,6 +82,6 @@ export function createWindowListen(fn?: (opt: CreateCallbackParams) => void) {
     screenRef: globalScreenRef,
     screenEnum,
     widthRef: globalWidthRef,
-    realWidthRef: globalRealWidthRef
+    realWidthRef: globalRealWidthRef,
   }
 }

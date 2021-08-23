@@ -2,12 +2,12 @@ import { isServer } from './tools'
 let lastTime = 0
 const prefixes = 'webkit moz ms o'.split(' ')
 
-let requestAnimationFrame: typeof window.requestAnimationFrame
-let cancelAnimationFrame: typeof window.cancelAnimationFrame
+let requestAnimationFrame = undefined
+let cancelAnimationFrame = undefined
 ;(() => {
-  const NO_LOOP: any = () => {}
-  const getWindowFrame = (name: string) => {
-    return name as any
+  const NO_LOOP = () => {}
+  const getWindowFrame = (name) => {
+    return name
   }
   if (isServer) {
     requestAnimationFrame = cancelAnimationFrame = NO_LOOP
@@ -26,7 +26,7 @@ let cancelAnimationFrame: typeof window.cancelAnimationFrame
 
     // If the current browser does not support requestAnimationFrame and cancelAnimationFrame, it will fall back to setTimeout
     if (!requestAnimationFrame || !cancelAnimationFrame) {
-      requestAnimationFrame = function (callback: Function) {
+      requestAnimationFrame = function (callback) {
         const currTime = new Date().getTime()
         const timeToCall = Math.max(0, 16 - (currTime - lastTime))
         const id = window.setTimeout(() => {
@@ -37,7 +37,7 @@ let cancelAnimationFrame: typeof window.cancelAnimationFrame
         return id
       }
 
-      cancelAnimationFrame = function (id: number) {
+      cancelAnimationFrame = function (id) {
         window.clearTimeout(id)
       }
     }
